@@ -1,12 +1,82 @@
 <header>
   <div class="container">
+    <%= image_pack_tag 'header_image.jpg', id: 'background_header' %>
+  </div>
+</header>
+<section class="cv_info">
+  <div class="container cv_info_main divider">
     <div class="row">
-      <div class="col-md-6">
-        <%= image_pack_tag 'me_DrySuit.jpg', id: 'me_drysuit' %>
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.cv_title') %></h3>
+        <p class="section_text"><%= t('.cv_text') %></p>
+        <%= link_to "CV area", cv_path, class: 'btn btn-secondary section_btn' %>
       </div>
-      <div class="col-md-6">
-        <% image_pack_tag 'me_FirstPerson', id: 'me_divind' %>
+      <div class="col-md-4">
+        <%= image_pack_tag 'cvsection_image.jpg', class: 'section_image' %>
       </div>
     </div>
   </div>
-</header>
+</section>
+<section class="diving_info">
+  <div class="container diving_info_main divider">
+    <div class="row main_section">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.diving_title') %></h3>
+        <p class="section_text"><%= t('.diving_text') %></p>
+        <%= link_to "Diving section", diving_path, class: 'btn btn-secondary section_btn' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="golf_info">
+  <div class="container golf_info_main divider">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.golf_title') %></h3>
+        <p class="section_text"><%= t('.golf_text') %></p>
+        <%= link_to "Golf section", golf_path, class: 'btn btn-secondary section_btn' %>
+      </div>
+      <div class="col-md-4">
+        <%= image_pack_tag 'golfsection_image.jpg', class: 'section_image' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="info">
+  <div class="container info_main divider">
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_pack_tag 'infosection_image.jpg', class: 'section_image' %>
+      </div>
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.info_title') %></h3>
+        <p class="section_text"><%= t('.info_text') %></p>
+        <%= link_to "Info section", info_path, class: 'btn btn-secondary section_btn' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="info">
+  <div class="container info_main divider">
+    <h3 class="section_title">Contact</h3>
+    <div class="container">
+      <div class="form-group">
+        <label></label>
+        <input>
+      </div>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <%= link_to '', 'https://www.facebook.com/brais.calvinoravina', class: 'fab fa-2x fa-facebook-square footer_link', target: '_blank' %>
+    <%= link_to 'https://www.instagram.com/photobrais/', class: 'footer_link', target: '_blank' do %>
+      <%= image_pack_tag 'instagram_logo.png', class: 'footer_logo' %>
+    <% end %>
+    <%= link_to '', '', class: 'fab fa-2x fa-linkedin footer_link', target: '_blank' %>
+    <%= link_to '', '', class: 'fab fa-2x fa-github-square' %>
+  </div>
+</footer>
