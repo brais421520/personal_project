@@ -7,22 +7,19 @@
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <%= link_to 'Home', root_path, class: 'nav-link' %>
+          <%= link_to t('.home'), root_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Info', root_path(anchor: 'information'), class: 'nav-link' %>
+          <%= link_to t('.cv'), root_path(anchor: 'cv_info'), class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to t('.price'), root_path(anchor: 'price_section'), class: 'nav-link' %>
+          <%= link_to t('.diving'), root_path(anchor: 'diving_info'), class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to t('.faq'), root_path(anchor: 'faq'), class: 'nav-link' %>
+          <%= link_to t('.golf'), root_path(anchor: 'golf_info'), class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to t('.contact'), root_path(anchor: 'contact'), class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= link_to t('.more_info'), root_path(anchor: 'more'), class: 'nav-link' %>
+          <%= link_to t('.info'), root_path(anchor: 'info'), class: 'nav-link' %>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -31,6 +28,9 @@
         </li>
         <li class="nav-item <%= 'active' if I18n.locale == :gl %>">
           <%= link_to 'GL', root_path(locale: 'gl'), class: 'nav-link language lang_gl' %>
+        </li>
+        <li class="nav-item <%= 'active' if I18n.locale == :en %>">
+          <%= link_to 'EN', root_path(locale: 'en'), class: 'nav-link language lang_en' %>
         </li>
       </ul>
     </div>

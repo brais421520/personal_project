@@ -1,0 +1,16 @@
+<%= form_with model: @corpu do |form| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="option">
+        <%= form.label :name, class: 'option_title' %><br>
+        <%= form.text_field :name %>
+        <% @corpu.errors.full_messages_for(:name).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <%= form.submit({class: 'btn button'}) %>
+  </div>
+<% end %>

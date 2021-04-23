@@ -1,12 +1,106 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_pack_tag 'index' %>
+<% end %>
 <header>
   <div class="container">
+    <%= image_pack_tag 'header_image.jpg', id: 'background_header' %>
+  </div>
+</header>
+<section class="cv_info">
+  <div class="container cv_info_main divider">
     <div class="row">
-      <div class="col-md-6">
-        <%= image_pack_tag 'me_DrySuit.jpg', id: 'me_drysuit' %>
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.cv_title') %></h3>
+        <p class="section_text"><%= t('.cv_text') %></p>
+        <%= link_to "CV area", cv_path, class: 'btn btn-secondary section_btn' %>
       </div>
-      <div class="col-md-6">
-        <% image_pack_tag 'me_FirstPerson.jpg', id: 'me_diving' %>
+      <div class="col-md-4">
+        <%= image_pack_tag 'cvsection_image.jpg', class: 'section_image' %>
       </div>
     </div>
   </div>
-</header>
+</section>
+<section class="diving_info">
+  <div class="container diving_info_main divider">
+    <div class="row main_section">
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.diving_title') %></h3>
+        <p class="section_text"><%= t('.diving_text') %></p>
+        <%= link_to "Diving section", diving_path, class: 'btn btn-secondary section_btn' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="golf_info">
+  <div class="container golf_info_main divider">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.golf_title') %></h3>
+        <p class="section_text"><%= t('.golf_text') %></p>
+        <%= link_to "Golf section", golf_path, class: 'btn btn-secondary section_btn' %>
+      </div>
+      <div class="col-md-4">
+        <%= image_pack_tag 'golfsection_image.jpg', class: 'section_image' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="info">
+  <div class="container info_main divider">
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_pack_tag 'infosection_image.jpg', class: 'section_image' %>
+      </div>
+      <div class="col-md-8">
+        <h3 class="section_title"><%= t('.info_title') %></h3>
+        <p class="section_text"><%= t('.info_text') %></p>
+        <%= link_to "Info section", info_path, class: 'btn btn-secondary section_btn' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="info">
+  <div class="container info_main divider">
+    <h3 class="section_title">Contact</h3>
+    <div class="product_form">
+      <%= form_with local: true do |form| %>
+        <div class="form-group">
+          <label class="required" for="name"><b>Nombre Completo</b></label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Juan Martinez Fernandez" required>
+        </div>
+        <div class="form-group">
+          <label class="required" for="email"><b>Email</b></label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="nombre@email.com" required>
+        </div>
+        <div class="form-group">
+          <label class="required" for="subject"><b>Asusnto</b></label>
+          <input type="text" class="form-control" id="subject" name="subject" placeholder="" required>
+          <div class="invalid-tooltip">
+            Por favor introduzca un asunto.
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="required" for="content"><b>Contendo de Email</b></label>
+          <textarea class="form-control" id="_email_content" rows="4" required></textarea>
+          <div class="invalid-tooltip">
+            Por favor introduzca el contenido del email.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+      <% end %>
+    </div>
+  </div>
+</section>
+<footer id="footer">
+  <div class="container">
+    <%= link_to '', 'https://www.facebook.com/brais.calvinoravina', class: 'fab fa-2x fa-facebook-square footer_link', target: '_blank' %>
+    <%= link_to 'https://www.instagram.com/photobrais/', class: 'footer_link', target: '_blank' do %>
+      <%= image_pack_tag 'instagram_logo.png', class: 'footer_logo' %>
+    <% end %>
+    <%= link_to '', '', class: 'fab fa-2x fa-linkedin footer_link', target: '_blank' %>
+    <%= link_to '', '', class: 'fab fa-2x fa-github-square' %>
+  </div>
+</footer>
