@@ -192,11 +192,14 @@
       </div>
     </div>
       <div class="col-md-1 side_box_title">
-        <p>Competition</p>
+        <%= golf_score.competition %>
       </div>
       <div class="col-md-1 side_box_title">
         <%= yield 'golf_locations#index' %>
       </div>
+      <%= link_to "Edit", edit_golf_score_path(@golf_score), class: 'btn button' %>
+      <%= link_to "Destroy", golf_path(@golf_score), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn button' %>
     </div>
   <% end %>
+  <%= link_to "New Golf Score", new_golf_score_path, class: 'btn button', id: 'new_golf_score' %>
 </div>

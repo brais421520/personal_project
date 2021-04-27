@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(version: 2021_04_22_164440) do
     t.integer "total"
     t.integer "handicap_comp"
     t.date "date"
+    t.text "competition"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

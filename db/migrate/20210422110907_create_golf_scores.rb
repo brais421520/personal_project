@@ -24,6 +24,7 @@ class CreateGolfScores < ActiveRecord::Migration[6.0]
       t.integer :total
       t.integer :handicap_comp
       t.date :date
+      t.text :competition
 
       t.timestamps
     end
