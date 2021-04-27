@@ -23,7 +23,7 @@ class CreateGolfScores < ActiveRecord::Migration[6.0]
       t.integer :in
       t.integer :total
       t.integer :handicap_comp
-      t.date :data
+      t.date :date
 
       t.timestamps
     end

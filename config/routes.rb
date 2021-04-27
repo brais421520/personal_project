@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     get 'golf', to:'golf_scores#index'
     get 'info', to:'pages#info_section'
     get 'diving', to:'dives#index'
+    get 'golf_location', to:'golf_locations#show'
 
   end
 end

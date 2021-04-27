@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_04_22_164440) do
   end
 
   create_table "dives", force: :cascade do |t|
-    t.date "data"
+    t.date "date"
     t.time "start_time"
     t.time "end_time"
     t.integer "start_pressure"
@@ -59,6 +59,49 @@ ActiveRecord::Schema.define(version: 2021_04_22_164440) do
 
   create_table "golf_locations", force: :cascade do |t|
     t.string "name"
+    t.string "country"
+    t.integer "loc_hole_1"
+    t.integer "loc_hole_2"
+    t.integer "loc_hole_3"
+    t.integer "loc_hole_4"
+    t.integer "loc_hole_5"
+    t.integer "loc_hole_6"
+    t.integer "loc_hole_7"
+    t.integer "loc_hole_8"
+    t.integer "loc_hole_9"
+    t.integer "loc_out"
+    t.integer "loc_hole_10"
+    t.integer "loc_hole_11"
+    t.integer "loc_hole_12"
+    t.integer "loc_hole_13"
+    t.integer "loc_hole_14"
+    t.integer "loc_hole_15"
+    t.integer "loc_hole_16"
+    t.integer "loc_hole_17"
+    t.integer "loc_hole_18"
+    t.integer "loc_in"
+    t.integer "loc_total"
+    t.integer "dis_hole_1"
+    t.integer "dis_hole_2"
+    t.integer "dis_hole_3"
+    t.integer "dis_hole_4"
+    t.integer "dis_hole_5"
+    t.integer "dis_hole_6"
+    t.integer "dis_hole_7"
+    t.integer "dis_hole_8"
+    t.integer "dis_hole_9"
+    t.integer "dis_out"
+    t.integer "dis_hole_10"
+    t.integer "dis_hole_11"
+    t.integer "dis_hole_12"
+    t.integer "dis_hole_13"
+    t.integer "dis_hole_14"
+    t.integer "dis_hole_15"
+    t.integer "dis_hole_16"
+    t.integer "dis_hole_17"
+    t.integer "dis_hole_18"
+    t.integer "dis_in"
+    t.integer "dis_total"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -71,6 +114,29 @@ ActiveRecord::Schema.define(version: 2021_04_22_164440) do
   end
 
   create_table "golf_scores", force: :cascade do |t|
+    t.integer "hole_1"
+    t.integer "hole_2"
+    t.integer "hole_3"
+    t.integer "hole_4"
+    t.integer "hole_5"
+    t.integer "hole_6"
+    t.integer "hole_7"
+    t.integer "hole_8"
+    t.integer "hole_9"
+    t.integer "out"
+    t.integer "hole_10"
+    t.integer "hole_11"
+    t.integer "hole_12"
+    t.integer "hole_13"
+    t.integer "hole_14"
+    t.integer "hole_15"
+    t.integer "hole_16"
+    t.integer "hole_17"
+    t.integer "hole_18"
+    t.integer "in"
+    t.integer "total"
+    t.integer "handicap_comp"
+    t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
