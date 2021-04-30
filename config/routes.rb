@@ -6,8 +6,10 @@ Rails.application.routes.draw do
     get 'golf', to:'golf_scores#index'
     get 'new_golf_score', to:'golf_scores#new'
     get 'edit_golf_score', to:'golf_scores#edit'
+    post 'new_golf_score', to:'golf_scores#create'
 
     get 'golf_location', to:'golf_locations#show'
+    get 'new_golf_location', to:'golf_locations#new'
 
     get 'diving', to:'dives#index'
 
